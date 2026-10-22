@@ -1,4 +1,4 @@
-# Java Programming Assignments (Module 2 & Module 3)
+# Java Programming Assignments (Modules 2, 3 & 4)
 
 **Student Name:** Rudra Rana  
 **Enrollment Number:** A023119824067  
@@ -8,174 +8,73 @@
 ## Repository Structure
 
 ```
-├── Module02/
-│   ├── Question01/
-│   │   ├── utilities/MathUtils.java
-│   │   └── Main.java
-│   ├── Question02/
-│   │   ├── shapes/
-│   │   │   ├── Shape.java
-│   │   │   ├── Circle.java
-│   │   │   └── Rectangle.java
-│   │   └── Main.java
-│   ├── Question03/
-│   │   └── Main.java
-│   ├── Question04/
-│   │   └── Main.java
-│   ├── Question05/
-│   │   └── Main.java
-│   ├── Question06/
-│   │   └── Main.java
-│   ├── Question07/
-│   │   └── Main.java
-│   ├── Question08/
-│   │   ├── InvalidAgeException.java
-│   │   └── Main.java
-│   ├── Question09/
-│   │   ├── InvalidAgeException.java
-│   │   └── Main.java
-│   └── Question10/
-│       └── Main.java
-├── Module03/
-│   ├── Question01/
-│   │   └── Main.java
-│   ├── Question02/
-│   │   └── Main.java
-│   ├── Question03/
-│   │   └── Main.java
-│   ├── Question04/
-│   │   └── Main.java
-│   ├── Question05/
-│   │   └── Main.java
-│   ├── Question06/
-│   │   └── Main.java
-│   ├── Question07/
-│   │   └── Main.java
-│   ├── Question08/
-│   │   └── Main.java
-│   ├── Question09/
-│   │   └── Main.java
-│   ├── Question10/
-│   │   └── Main.java
-│   ├── Question11/
-│   │   └── Main.java
-│   ├── Question12/
-│   │   └── Main.java
-│   ├── Question13/
-│   │   └── Main.java
-│   ├── Question14/
-│   │   └── Main.java
-│   ├── Question15/
-│   │   └── Main.java
-│   ├── Question16/
-│   │   └── Main.java
-│   ├── Question17/
-│   │   └── Main.java
-│   ├── Question18/
-│   │   └── Main.java
-│   ├── Question19/
-│   │   └── Main.java
-│   ├── Question20/
-│   │   └── Main.java
-│   ├── Question21/
-│   │   └── Main.java
-│   ├── Question22/
-│   │   └── Main.java
-│   ├── Question23/
-│   │   └── Main.java
-│   ├── Question24/
-│   │   └── Main.java
-│   ├── Question25/
-│   │   └── Main.java
-│   ├── Question26/
-│   │   └── Main.java
-│   └── Question27/
-│       └── Main.java
+├── Module02/                       # Module 2: Packages, Interfaces, Exceptions (10 questions)
+│   ├── Question01/ ... Question10/
+├── Module03/                       # Module 3: Multithreading, I/O Streams, File Handling (27 questions)
+│   ├── Question01/ ... Question27/
+├── Module04/                       # Module 4: Generics, Collections Framework & Concurrency (45 questions)
+│   ├── Question01/ ... Question45/
+│   └── Module04_Theory_Answers.md  # Comprehensive theoretical answers for all questions
 └── README.md
 ```
 
 ---
 
-## Module 2: Packages, Interfaces & Exceptions
-
-### Section 1: Defining, Implementing, and Importing Packages
-1. **Question 1:** Java package `utilities` with class `MathUtils` and method `add(int a, int b)`. Demonstrated in another class.
-2. **Question 2:** Package `shapes` with interface `Shape` (`double area()`, `double perimeter()`), implemented in `Circle` and `Rectangle`.
-3. **Question 3:** Using `ArrayList` from `java.util` to store and display integers.
-
-### Section 2: Interfaces
-4. **Question 4:** Functional interface `Calculator` with `int compute(int a, int b)` implemented using lambda expressions for addition, subtraction, and multiplication.
-5. **Question 5:** Sorting a list of strings in descending order using a lambda expression.
-6. **Question 6:** Static method reference (`Main::square`) to compute the square of a number.
-
-### Section 3: Errors and Exceptions
-7. **Question 7:** Difference between `try-catch` and `try-catch-finally` handling `ArithmeticException`.
-8. **Question 8:** Custom exception `InvalidAgeException` thrown when user's age is less than 18.
-9. **Question 9:** Custom exception `InvalidAgeException` with error logging to file using `java.util.logging`.
-10. **Question 10:** Demonstration of `throw` and `throws` calculating factorial, throwing `IllegalArgumentException` on negative numbers.
+## Module 2: Packages, Interfaces & Exceptions (10 Questions)
+- **Question 1:** Custom package `utilities` with class `MathUtils` and method `add(int a, int b)`.
+- **Question 2:** Package `shapes` with interface `Shape` implemented by `Circle` and `Rectangle`.
+- **Question 3:** Using `ArrayList` from `java.util` to store and display integers.
+- **Question 4:** Functional interface `Calculator` with lambda expressions for addition, subtraction, multiplication.
+- **Question 5:** Sorting strings in descending order using lambda comparator.
+- **Question 6:** Static method reference (`Main::square`) to compute the square of a number.
+- **Question 7:** Difference between `try-catch` and `try-catch-finally` handling `ArithmeticException`.
+- **Question 8:** Custom exception `InvalidAgeException` thrown when user's age is less than 18.
+- **Question 9:** Custom exception `InvalidAgeException` with file logging using `java.util.logging`.
+- **Question 10:** Demonstration of `throw` and `throws` in factorial calculation.
 
 ---
 
-## Module 3: Multithreading, Concurrency, I/O Streams, File Handling & Utilities
+## Module 3: Multithreading, I/O Streams & File Handling (27 Questions)
+- **Questions 1–6:** Thread extension, `Runnable` implementation, `Thread.sleep()`, countdown timer, naming/priority, daemon threads.
+- **Questions 7–12:** Synchronized methods (ticket booking), synchronized blocks (inventory), Dining Philosophers deadlock, Producer-Consumer (`wait()`/`notify()`), alternating odd/even printing, graceful thread stop flag.
+- **Questions 13–14:** `ReentrantLock` counter vs unsafe counter, deadlock resolution with `tryLock()` timeout.
+- **Questions 15–19:** Byte streams (`FileInputStream`/`FileOutputStream`), Character streams (`FileReader`/`FileWriter`), Buffered I/O (`BufferedReader`/`BufferedWriter`).
+- **Questions 20–24:** File existence/creation, directory listing, file copying, file deletion, `RandomAccessFile` read/overwrite.
+- **Questions 25–27:** `java.lang.Math`, `java.util.Date` and `Calendar`, `java.util.regex` email validation.
 
-### Thread Concepts and Implementation
-1. **Question 1:** Creating a thread by extending `Thread` class to print even numbers from 2 to 20 with 500ms delay.
-2. **Question 2:** Creating a thread by implementing `Runnable` interface to print characters of `"MULTITHREADING"` in reverse order.
-3. **Question 3:** `Thread.sleep()` demonstration with two threads (Thread 1 every 1 second, Thread 2 every 2 seconds).
-4. **Question 4:** Multithreaded countdown timer (10 to 1 with 1s delay) while another thread prints "Tick" every 500ms.
-5. **Question 5:** Thread naming and priority assignment for "Worker-1", "Worker-2", and "Worker-3".
-6. **Question 6:** Daemon thread continuously running auto-save while main thread processes file tasks.
+---
 
-### Thread Synchronization & Inter-thread Communication
-7. **Question 7:** Synchronized method in ticket booking system to prevent overselling of tickets.
-8. **Question 8:** Synchronized block in inventory management ensuring thread-safe product stock reduction.
-9. **Question 9:** Dining Philosophers deadlock simulation with 2 philosophers and 2 chopsticks.
-10. **Question 10:** Producer-Consumer problem implementation using `wait()` and `notify()`.
-11. **Question 11:** Alternating odd and even number printing (1 to 20) using two threads with `wait()` and `notify()`.
-12. **Question 12:** Graceful thread termination using a volatile boolean stop flag for file download simulation.
-
-### Lock Interface
-13. **Question 13:** Thread-safe counter using `ReentrantLock` compared against an unsynchronized counter.
-14. **Question 14:** Deadlock avoidance using `tryLock()` with timeout in `ReentrantLock`.
-
-### I/O Streams: Byte Stream and Character Stream
-15. **Question 15:** Reading a file using byte stream (`FileInputStream`).
-16. **Question 16:** Writing "Java I/O Streams Example" to `output.txt` using byte stream (`FileOutputStream`).
-17. **Question 17:** Reading a file using character stream (`FileReader`).
-18. **Question 18:** Writing a string to `example.txt` using character stream (`FileWriter`).
-19. **Question 19:** Buffered I/O using `BufferedReader` and `BufferedWriter` for improved performance.
-
-### File Handling
-20. **Question 20:** Checking file existence and creating the file if it does not exist using `File` class.
-21. **Question 21:** Listing all files and directories in a user-specified path with exception handling.
-22. **Question 22:** Copying file contents from one file to another using byte streams.
-23. **Question 23:** Deleting a file from the system using `File.delete()`.
-24. **Question 24:** Using `RandomAccessFile` to seek, read, and overwrite specific file positions.
-
-### Standard Java Packages
-25. **Question 25:** Demonstrating `Math.abs()`, `Math.sqrt()`, `Math.max()`, and `Math.random()` from `java.lang`.
-26. **Question 26:** Displaying current date and time using `java.util.Date` and `java.util.Calendar`.
-27. **Question 27:** Email address validation using `Pattern` and `Matcher` from `java.util.regex`.
+## Module 4: Generics & Collections Framework (45 Coding Questions + Theory)
+- **Questions 1–6 (Generics):** Bounded type parameters (`<T extends Number>`), generic `Pair<K, V>`, generic `Box<T>`, generic method `swapElements`, generic `Stack<T>`, generic `MinMaxFinder<T extends Comparable<T>>`.
+- **Questions 7–12 (Collections & List Interface):** Three iteration techniques on List, generic collection printer, `ArrayList` storage and iteration, List manipulation operations, `ArrayList` vs `LinkedList` performance comparison benchmark, sorting strings alphabetically and reverse alphabetically.
+- **Questions 13–16 (Set Interface):** `TreeSet` sorted elements, `HashSet` duplicate rejection, `TreeSet` min/max and removal, `LinkedHashSet` order preservation.
+- **Questions 17–20 (Map Interface):** `TreeMap` sorted keys, `HashMap` employee registry with `keySet`/`entrySet`, `TreeMap` automatic key sorting, `HashMap` vs `LinkedHashMap` iteration order comparison.
+- **Questions 21–26 (Queue, Stack & Deque):** Ticket booking simulation with `Queue` (`LinkedList`), `PriorityQueue` task manager, `java.util.Stack` operations, `ArrayDeque` double-ended operations, palindrome check with `Deque`, simple Queue with `LinkedList`.
+- **Questions 27–29 (Concurrency & Thread-Safety):** `Vector` multithreaded thread-safety, `ConcurrentHashMap` concurrent modification safety, `CopyOnWriteArrayList` concurrent iteration and modification.
+- **Questions 30–33 (Collections Utilities):** `Collections.shuffle` and `sort`, `Collections.unmodifiableList`, `Collections.binarySearch`, `Collections.frequency`.
+- **Questions 34–35 (Custom Comparators):** Custom object sorting (`Student` name & marks), Map sorting by values using a custom `Comparator`.
+- **Questions 36–40 (Practical Use Cases):** LRU Cache using `LinkedHashMap`, To-Do List application using `ArrayList`, character frequency counter with `HashMap`, Student gradebook using `TreeMap`, merging and sorting `PriorityQueue` instances.
+- **Questions 41–45 (Advanced Questions):** Generic `MultiMap<K, V>` with `HashMap<K, List<V>>`, simple banking system with `Map`, `WeakHashMap` garbage collection demonstration, Book Catalog system with `HashMap`, product catalog in `TreeMap` sorted by name.
+- **Theory Answers:** Full documented answers in [Module04_Theory_Answers.md](file:///Users/rudrarana/java%20assingment/Module04/Module04_Theory_Answers.md).
 
 ---
 
 ## How to Compile and Run
 
-Navigate into any question directory under `Module02` or `Module03` and execute:
-
+Navigate to any question folder and run:
 ```bash
-# Example: Module 3 Question 1
-cd Module03/Question01
+# Example: Module 4 Question 1 (Bounded Generics)
+cd Module04/Question01
 javac Main.java
 java Main
 
-# Example: Module 3 Question 10 (Producer-Consumer)
-cd Module03/Question10
+# Example: Module 4 Question 36 (LRU Cache)
+cd Module04/Question36
 javac Main.java
 java Main
 
-# Example: Module 3 Question 27 (Regex Email Validation)
-cd Module03/Question27
+# Example: Module 4 Question 41 (Generic MultiMap)
+cd Module04/Question41
 javac Main.java
 java Main
 ```
