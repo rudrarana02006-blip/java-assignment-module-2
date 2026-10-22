@@ -1,4 +1,4 @@
-# Java Programming Assignments (Modules 2, 3 & 4)
+# Java Programming Assignments (Modules 2, 3, 4 & 5)
 
 **Student Name:** Rudra Rana  
 **Enrollment Number:** A023119824067  
@@ -8,13 +8,28 @@
 ## Repository Structure
 
 ```
-├── Module02/                       # Module 2: Packages, Interfaces, Exceptions (10 questions)
+├── Module02/                                # Module 2: Packages, Interfaces, Exceptions (10 questions)
 │   ├── Question01/ ... Question10/
-├── Module03/                       # Module 3: Multithreading, I/O Streams, File Handling (27 questions)
+├── Module03/                                # Module 3: Multithreading, I/O Streams, File Handling (27 questions)
 │   ├── Question01/ ... Question27/
-├── Module04/                       # Module 4: Generics, Collections Framework & Concurrency (45 questions)
+├── Module04/                                # Module 4: Generics, Collections Framework & Concurrency (45 questions)
 │   ├── Question01/ ... Question45/
-│   └── Module04_Theory_Answers.md  # Comprehensive theoretical answers for all questions
+│   └── Module04_Theory_Answers.md           # Theoretical answers for Module 4
+├── Module05/                                # Module 5: Annotations, Reflection & Maven Framework
+│   ├── Question17_StringLengthValidator/    # Custom string length validation annotation
+│   ├── Question18_RepeatableAnnotations/    # Repeatable role annotations
+│   ├── Question21_MinLengthAnnotation/      # @MinLength validation annotation
+│   ├── Question22_AuthorVersionAnnotation/  # @ClassInfo author and version annotation
+│   ├── Question25_ArrayParametersAnnotation/# Array parameter annotation handling
+│   ├── Question26_JsonFieldAnnotation/      # @JsonField custom JSON serializer
+│   ├── Question28_ReflectionAnnotationProcessor/ # Reflection invocation by annotation priority
+│   ├── Question29_MethodExecutionTime/      # Method execution timing annotation
+│   ├── Exercise01_AnnotationValidation/     # Maven project validating user input via annotations
+│   ├── Exercise02_TransitiveDependencies/   # Maven project with transitive dependency exclusion
+│   ├── Exercise03_CustomAnnotationsApp/     # Core Java application with custom annotations & Maven
+│   ├── Exercise04_WebApplicationWar/        # Maven web application with maven-war-plugin
+│   ├── Exercise05_MultiModuleProject/       # Multi-module Maven project with parent POM
+│   └── Module05_Theory_Answers.md           # Complete answers to all 50 questions
 └── README.md
 ```
 
@@ -59,22 +74,48 @@
 
 ---
 
+## Module 5: Java Annotations, Reflection & Maven Framework
+
+### Coding Implementations
+- **[Question 17](file:///Users/rudrarana/java%20assingment/Module05/Question17_StringLengthValidator/Main.java):** Custom `@StringLength(min, max)` validator.
+- **[Question 18](file:///Users/rudrarana/java%20assingment/Module05/Question18_RepeatableAnnotations/Main.java):** Java 8 `@Repeatable` annotations with container.
+- **[Question 21](file:///Users/rudrarana/java%20assingment/Module05/Question21_MinLengthAnnotation/Main.java):** Custom `@MinLength` string validator.
+- **[Question 22](file:///Users/rudrarana/java%20assingment/Module05/Question22_AuthorVersionAnnotation/Main.java):** Custom `@ClassInfo` specifying author and version.
+- **[Question 25](file:///Users/rudrarana/java%20assingment/Module05/Question25_ArrayParametersAnnotation/Main.java):** Annotation with array parameters handling.
+- **[Question 26](file:///Users/rudrarana/java%20assingment/Module05/Question26_JsonFieldAnnotation/Main.java):** Custom `@JsonField` serialization engine.
+- **[Question 28](file:///Users/rudrarana/java%20assingment/Module05/Question28_ReflectionAnnotationProcessor/Main.java):** Reflection processor dynamically invoking methods sorted by annotation priority.
+- **[Question 29](file:///Users/rudrarana/java%20assingment/Module05/Question29_MethodExecutionTime/Main.java):** `@LogExecutionTime` method timer.
+
+### Practical Maven Exercises
+- **[Exercise 1](file:///Users/rudrarana/java%20assingment/Module05/Exercise01_AnnotationValidation):** Maven project for user input validation with custom annotations.
+- **[Exercise 2](file:///Users/rudrarana/java%20assingment/Module05/Exercise02_TransitiveDependencies):** Maven project managing transitive dependencies and exclusions.
+- **[Exercise 3](file:///Users/rudrarana/java%20assingment/Module05/Exercise03_CustomAnnotationsApp):** Core Java application combining custom annotations and Maven build.
+- **[Exercise 4](file:///Users/rudrarana/java%20assingment/Module05/Exercise04_WebApplicationWar):** Web application configured with `maven-war-plugin` and `web.xml`.
+- **[Exercise 5](file:///Users/rudrarana/java%20assingment/Module05/Exercise05_MultiModuleProject):** Multi-module Maven project with parent POM, `core-module`, and `service-module`.
+
+### Comprehensive Theoretical Solutions
+- Complete answers to all 50 questions in [Module05_Theory_Answers.md](file:///Users/rudrarana/java%20assingment/Module05/Module05_Theory_Answers.md).
+
+---
+
 ## How to Compile and Run
 
-Navigate to any question folder and run:
+Navigate to any question or exercise directory:
+
 ```bash
-# Example: Module 4 Question 1 (Bounded Generics)
-cd Module04/Question01
+# Standalone Module 5 program
+cd Module05/Question26_JsonFieldAnnotation
 javac Main.java
 java Main
 
-# Example: Module 4 Question 36 (LRU Cache)
-cd Module04/Question36
-javac Main.java
-java Main
+# Module 5 Maven Exercise 1
+cd Module05/Exercise01_AnnotationValidation/src/main/java
+javac com/assignment/validation/*.java
+java com.assignment.validation.Main
 
-# Example: Module 4 Question 41 (Generic MultiMap)
-cd Module04/Question41
-javac Main.java
-java Main
+# Module 5 Multi-Module Exercise 5
+cd Module05/Exercise05_MultiModuleProject
+javac core-module/src/main/java/com/assignment/core/*.java
+javac -cp core-module/src/main/java service-module/src/main/java/com/assignment/service/*.java
+java -cp core-module/src/main/java:service-module/src/main/java com.assignment.service.ServiceApp
 ```
