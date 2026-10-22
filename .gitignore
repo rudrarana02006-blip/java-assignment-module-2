@@ -1,3 +1,5 @@
 *.class
 *.log
+*.dat
+*.txt
 .DS_Store
